@@ -24,14 +24,14 @@ adult knee tourist settle shock noise visa afraid love settle identify either
 ```
 ### Solana Config Set
 ```
-$ solana config set --keypair ~/Desktop/id.json
+$ solana config set --keypair /Users/roco/.config/solana/id.json
 ```
 Output:
 ```
 Config File: /Users/roco/.config/solana/cli/config.yml
-RPC URL: https://api.mainnet-beta.solana.com 
-WebSocket URL: wss://api.mainnet-beta.solana.com/ (computed)
-Keypair Path: /Users/roco/Desktop/id.json 
+RPC URL: https://api.devnet.solana.com 
+WebSocket URL: wss://api.devnet.solana.com/ (computed)
+Keypair Path: /Users/roco/.config/solana/id.json 
 Commitment: confirmed 
 ```
 ### Solana Test/Main/Dev Net
