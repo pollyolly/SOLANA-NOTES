@@ -127,7 +127,7 @@ $ cd hello-solana
 $ npm install --save @solana/web3.js
 ```
 hello-solana/src/client/maint.ts
-```
+```vim
 import {
     Keypair,
     Connection,
@@ -137,10 +137,72 @@ import {
     Transaction,
     sendAndConfirmTransaction,
 } from '@solana/web3.js';
+import fs from 'mz/fs';
 import path from 'path';
 
 const PROGRAM_KEYPAIR_PATH = path.join(
     path.resolve(__dirname, '../../program'),
     'target/deploy/program-keypair.json'
 );
+
+async function main() {
+    console.log("Launching cllient...");
+/*
+  Connect to Solana Dev Net
+*/
+    let connection = new Connection('https://api.devnet.solana.com', 'confirmed');
+/*
+  Get our program public key
+*/
+    const secretKeyString = await fs.readFile(PROGRAM_KEYPAIR_PATH, {encoding: 'utf8'});
+    const secretKey = Uint8Array.from(JSON.parse(secretKeyString));
+    const programKeypair = Keypair.fromSecretKey(secretKey);
+    let programId: PublicKey = programKeypair.publicKey;
+
+    /*
+    Generate account (keypair) to transact with our program
+*/
+    const triggerKeypair = Keypair.generate();
+    const airdropRequest = await connection.requestAirdrop(
+        triggerKeypair.publicKey,
+        LAMPORTS_PER_SOL,
+    );
+    await connection.confirmTransaction(airdropRequest);
+
+    console.log("--Pinging Program", programId.toBase58());
+    const instruction = new TransactionInstruction({
+        keys: [{pubkey: triggerKeypair.publicKey, isSigner: false, isWritable: true}],
+        programId,
+        data: Buffer.alloc(0)
+    });
+    await sendAndConfirmTransaction(
+        connection,
+        new Transaction().add(instruction),
+        [triggerKeypair]
+    );
+        
+}
+```
+package.json
+```
+{
+"scripts": {
+  "start": "ts-node src/client/main.ts",
+  "clean": "npm run clean:program",
+  "build:program": "cargo build-bpf --manifest-path=./src/program/Cargo.toml --bpf-out-dir=dist/program",
+  "clean:program": "cargo clean --manifest-path=./src/program/Cargo.toml && rm -rf ./dist",
+  "test:program": "cargot test-bpf --manifest-path=./src/program/Cargo.toml"
+},
+"dependencies": {
+    "@solana/web3.js": "^1.89.0"
+  }
+}
+```
+Create dist/program and Execute
+```
+$ npm run build:program
+```
+Re-deploy Solana Program 
+```
+$ solana program deploy ./dist/program/program.so
 ```
