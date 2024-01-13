@@ -159,7 +159,7 @@ async function main() {
     const programKeypair = Keypair.fromSecretKey(secretKey);
     let programId: PublicKey = programKeypair.publicKey;
 
-    /*
+/*
     Generate account (keypair) to transact with our program
 */
     const triggerKeypair = Keypair.generate();
