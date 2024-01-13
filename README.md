@@ -113,4 +113,8 @@ fn process_instruction(
     Ok(())
 }
 ```
+### Deploy Solana Program
+```
+$ solana program deploy target/deploy/program.so 
+```
 
