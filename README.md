@@ -8,3 +8,7 @@ close terminal and run the path
 ```
 export PATH="/Users/roco/.local/share/solana/install/active_release/bin:$PATH"
 ```
+Generate solana keygen
+```
+$solana-keygen new
+```
