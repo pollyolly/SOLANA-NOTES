@@ -65,12 +65,6 @@ $ solana airdrop 1  =requesting SOL
 $ mkdir hello-solana
 $ touch package.json
 $ mkdir hello-solana/src
-
-$ cd hello-solana/src
-$ cargo new --lib program
-
-$ cd  hello-solana/program/
-$ cargo build-bpf
 ```
 hello-solana/src/program/Cargo.toml
 ```
@@ -91,6 +85,15 @@ solana-sdk = "1.9.9"
 [lib]
 crate-type = ["cdlib", "lib"]
 ```
+
+```
+$ cd hello-solana/src
+$ cargo new --lib program
+
+$ cd  hello-solana/program/
+$ cargo build-bpf
+```
+
 hello-solana/src/program/src/lib.rs
 ```
 use solana_program::{
@@ -100,9 +103,7 @@ use solana_program::{
     msg,
     pubkey::Pubkey
 };
-
 entrypoint!(process_instruction);
-
 fn process_instruction(
         program_id: &Pubkey,
         accounts: &[AccountInfo],
@@ -112,3 +113,4 @@ fn process_instruction(
     Ok(())
 }
 ```
+
