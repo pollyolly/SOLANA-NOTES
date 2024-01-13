@@ -10,16 +10,17 @@ export PATH="/Users/roco/.local/share/solana/install/active_release/bin:$PATH"
 ```
 ### Generate Solana Keygen
 ```
-$solana-keygen new
+$solana-keygen new 
 ```
 Output:
 ```
-===============================================================================
-pubkey: HEDZ5WTLSfz5QU71dm1mgkickbZSBC21CuED8WyGwFX
-===============================================================================
+Wrote new keypair to /Users/roco/.config/solana/id.json
+=============================================================================
+pubkey: 6LzTE5dYd3hNEiZ4o5X6BhUu8SNDpRC2K2taCNQnRBjc
+=============================================================================
 Save this seed phrase and your BIP39 passphrase to recover your new keypair:
-second ginger priority lemon since entire snake alone brick desert tonight home
-===============================================================================
+adult knee tourist settle shock noise visa afraid love settle identify either
+=============================================================================
 ```
 ### Solana Config Set
 ```
