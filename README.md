@@ -83,7 +83,7 @@ solana-program-test = "1.9.9"
 solana-sdk = "1.9.9"
 
 [lib]
-crate-type = ["cdlib", "lib"]
+crate-type = ["cdylib", "lib"]
 ```
 
 ```
