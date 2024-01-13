@@ -12,7 +12,7 @@ export PATH="/Users/roco/.local/share/solana/install/active_release/bin:$PATH"
 ```
 $solana-keygen new
 ```
-Example output:
+Output:
 ```
 ===============================================================================
 pubkey: HEDZ5WTLSfz5QU71dm1mgkickbZSBC21CuED8WyGwFX
@@ -25,6 +25,7 @@ second ginger priority lemon since entire snake alone brick desert tonight home
 ```
 $ solana config set --keypair ~/Desktop/id.json
 ```
+Output:
 ```
 Config File: /Users/roco/.config/solana/cli/config.yml
 RPC URL: https://api.mainnet-beta.solana.com 
