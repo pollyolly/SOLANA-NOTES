@@ -63,7 +63,6 @@ $ solana airdrop 1  =requesting SOL
 ### Create App Folder
 ```
 $ mkdir hello-solana
-$ touch package.json
 $ mkdir hello-solana/src
 ```
 hello-solana/src/program/Cargo.toml
