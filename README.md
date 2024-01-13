@@ -33,3 +33,20 @@ WebSocket URL: wss://api.mainnet-beta.solana.com/ (computed)
 Keypair Path: /Users/roco/Desktop/id.json 
 Commitment: confirmed 
 ```
+### Solana Test/Main/Dev Net
+```
+https://api.testnet.solana.com
+https://api.mainnet-beta.solana.com
+https://api.devnet.solana.com
+```
+```
+$ solana config set --url https://api.devnet.solana.com
+```
+Output:
+```
+Config File: /Users/roco/.config/solana/cli/config.yml
+RPC URL: https://api.devnet.solana.com 
+WebSocket URL: wss://api.devnet.solana.com/ (computed)
+Keypair Path: /Users/roco/Desktop/id.json 
+Commitment: confirmed
+```
