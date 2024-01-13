@@ -53,8 +53,8 @@ Commitment: confirmed
 ```
 ### CLI Commands
 ```
-$ solana logs
-$ solana balance
-$ solana airdrop
+$ solana logs       =check solana logs
+$ solana balance    =check balance
+$ solana airdrop 1  =requesting SOL 
 
 ```
