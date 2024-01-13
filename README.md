@@ -115,6 +115,11 @@ fn process_instruction(
 ```
 ### Deploy Solana Program
 ```
-$ solana program deploy target/deploy/program.so 
+$ cd hello-solana/src/program/
+$ solana program deploy target/deploy/program.so
+```
+Check Configuration
+```
+$ solana config get
 ```
 
