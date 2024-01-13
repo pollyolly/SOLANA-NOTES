@@ -223,7 +223,7 @@ $ solana program deploy ./dist/program/program.so
 ```
 Display deployed programs
 ```
-$ solana programs show --programs
+$ solana program show --programs
 ```
 Find ProgramId in Solana Logs
 ```
