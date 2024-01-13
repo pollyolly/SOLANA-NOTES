@@ -4,7 +4,7 @@
 ```
 sh -c "$(curl -sSfL https://release.solana.com/v1.17.16/install)"
 ```
-close terminal and run the path
+close terminal and run the path in terminal
 ```
 export PATH="/Users/roco/.local/share/solana/install/active_release/bin:$PATH"
 ```
