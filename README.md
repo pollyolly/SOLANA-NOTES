@@ -122,4 +122,9 @@ Check Configuration
 ```
 $ solana config get
 ```
+### Install Web3 Client
+```
+$ cd hello-solana
+$ npm install --save @solana/web3.js
+```
 
