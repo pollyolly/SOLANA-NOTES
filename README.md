@@ -72,7 +72,7 @@ $ cargo new --lib program
 $ cd  hello-solana/program/
 $ cargo build-bpf
 ```
-Cargo.toml
+hello-solana/src/program/Cargo.toml
 ```
 [package]
 name = "program"
@@ -90,4 +90,25 @@ solana-sdk = "1.9.9"
 
 [lib]
 crate-type = ["cdlib", "lib"]
+```
+hello-solana/src/program/src/lib.rs
+```
+use solana_program::{
+    account_info::AccountInfo,
+    entrypoint,
+    entrypoint::ProgramResult,
+    msg,
+    pubkey::Pubkey
+};
+
+entrypoint!(process_instruction);
+
+fn process_instruction(
+        program_id: &Pubkey,
+        accounts: &[AccountInfo],
+        instruction_data: &[u8],
+    )-> ProgramResult {
+    msg!("Hello Solana! {From Rust!}");
+    Ok(())
+}
 ```
