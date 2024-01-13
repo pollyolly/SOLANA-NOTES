@@ -8,7 +8,7 @@ close terminal and run the path
 ```
 export PATH="/Users/roco/.local/share/solana/install/active_release/bin:$PATH"
 ```
-### Generate solana keygen
+### Generate Solana Keygen
 ```
 $solana-keygen new
 ```
@@ -20,4 +20,15 @@ pubkey: HEDZ5WTLSfz5QU71dm1mgkickbZSBC21CuED8WyGwFX
 Save this seed phrase and your BIP39 passphrase to recover your new keypair:
 second ginger priority lemon since entire snake alone brick desert tonight home
 ===============================================================================
+```
+### Solana Config Set
+```
+$ solana config set --keypair ~/Desktop/id.json
+```
+```
+Config File: /Users/roco/.config/solana/cli/config.yml
+RPC URL: https://api.mainnet-beta.solana.com 
+WebSocket URL: wss://api.mainnet-beta.solana.com/ (computed)
+Keypair Path: /Users/roco/Desktop/id.json 
+Commitment: confirmed 
 ```
