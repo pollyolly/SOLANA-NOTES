@@ -193,8 +193,16 @@ package.json
   "clean:program": "cargo clean --manifest-path=./src/program/Cargo.toml && rm -rf ./dist",
   "test:program": "cargot test-bpf --manifest-path=./src/program/Cargo.toml"
 },
-"dependencies": {
-    "@solana/web3.js": "^1.89.0"
+  "dependencies": {
+    	"@solana/web3.js":"^1.89.0",
+    	"ts-node":"^10.9.2",
+    	"mz": "^2.7.0"
+  },
+  "devDependencies": {
+    	"@tsconfig/recommended": "^1.0.1",
+    	"@types/mz": "^2.7.2",
+    	"ts-node": "^10.0.0",
+    	"typescript": "^4.0.5"
   }
 }
 ```
