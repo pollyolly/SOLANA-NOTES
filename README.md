@@ -60,3 +60,12 @@ $ solana logs       =check solana logs
 $ solana balance    =check balance
 $ solana airdrop 1  =requesting SOL 
 ```
+### Create App Folder
+```
+$ mkdir hello-solana
+$ cd hello-solana
+$ cargo new --lib program
+
+$ cd  hello-solana/program/
+$ cargo build-bpf
+```
