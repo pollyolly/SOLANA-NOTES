@@ -51,3 +51,10 @@ WebSocket URL: wss://api.devnet.solana.com/ (computed)
 Keypair Path: /Users/roco/Desktop/id.json 
 Commitment: confirmed
 ```
+### CLI Commands
+```
+$ solana logs
+$ solana balance
+$ solana airdrop
+
+```
