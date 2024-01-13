@@ -72,3 +72,22 @@ $ cargo new --lib program
 $ cd  hello-solana/program/
 $ cargo build-bpf
 ```
+Cargo.toml
+```
+[package]
+name = "program"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+solana-program = "1.9.9"
+
+[dev-dependencies]
+solana-program-test = "1.9.9"
+solana-sdk = "1.9.9"
+
+[lib]
+crate-type = ["cdlib", "lib"]
+```
