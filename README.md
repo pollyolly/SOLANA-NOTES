@@ -206,3 +206,16 @@ Re-deploy Solana Program
 ```
 $ solana program deploy ./dist/program/program.so
 ```
+Display deployed programs
+```
+$ solana programs show --programs
+```
+Find ProgramId in Solana Logs
+```
+$ solana logs | grep "FzijVdNpxK3PDhZEi3xZHfzqTuNLc9ZgNnDUrQwgVgJo invoke" - A 3 
+```
+Run The Program
+```
+$ hello-solana
+$ npm run start
+```
