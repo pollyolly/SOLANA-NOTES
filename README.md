@@ -126,4 +126,21 @@ $ solana config get
 $ cd hello-solana
 $ npm install --save @solana/web3.js
 ```
+hello-solana/src/client/maint.ts
+```
+import {
+    Keypair,
+    Connection,
+    PublicKey,
+    LAMPORTS_PER_SOL,
+    TransactionInstruction,
+    Transaction,
+    sendAndConfirmTransaction,
+} from '@solana/web3.js';
+import path from 'path';
 
+const PROGRAM_KEYPAIR_PATH = path.join(
+    path.resolve(__dirname, '../../program'),
+    'target/deploy/program-keypair.json'
+);
+```
