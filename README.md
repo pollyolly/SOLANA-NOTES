@@ -234,3 +234,9 @@ Run The Program
 $ hello-solana
 $ npm run start
 ```
+### Troubleshoot
+Fix missing keypair.json
+```
+$ cd hello-solana
+$ cp -r dist/program/* program/target/deploy/
+```
