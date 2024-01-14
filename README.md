@@ -240,7 +240,7 @@ $ hello-solana
 $ npm run start
 ```
 ### Troubleshoot
-Fix missing keypair.json
+Fix missing keypair.json (Transfer program-keypair.json and program.so*)
 ```
 $ cd hello-solana
 $ cp -r dist/program/* program/target/deploy/
