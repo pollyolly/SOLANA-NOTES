@@ -248,3 +248,5 @@ Fix missing keypair.json (Transfer program-keypair.json and program.so*)
 $ cd hello-solana
 $ cp -r dist/program/* program/target/deploy/
 ```
+### Reference
+[Solana CLI](https://youtu.be/MiJtRAP6iOU?si=N5J9W2Sifqr-A90I)
