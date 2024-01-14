@@ -213,6 +213,9 @@ package.json
   }
 }
 ```
+```
+$ npm install 
+```
 Create dist/program and Execute
 ```
 $ npm run build:program
