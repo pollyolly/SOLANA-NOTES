@@ -225,6 +225,11 @@ Display deployed programs
 ```
 $ solana program show --programs
 ```
+```
+Program Id                                   | Slot      | Authority                                    | Balance
+FzijVdNpxK3PDhZEi3xZHfzqTuNLc9ZgNnDUrQwgVgJo | 272245984 | 6LzTE5dYd3hNEiZ4o5X6BhUu8SNDpRC2K2taCNQnRBjc | 0.28004952 SOL
+BGP3NP2bV7gjxVX8Sd5psiHocsjFpztmNd2NkGo9yZhC | 272244152 | 6LzTE5dYd3hNEiZ4o5X6BhUu8SNDpRC2K2taCNQnRBjc | 0.28004952 SOL
+```
 Find ProgramId in Solana Logs
 ```
 $ solana logs | grep "FzijVdNpxK3PDhZEi3xZHfzqTuNLc9ZgNnDUrQwgVgJo invoke" - A 3 
